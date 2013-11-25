@@ -45,3 +45,7 @@ var userSchema = mongoose.Schema({
 });
 
 exports.User = mongoose.model('User', userSchema);
+exports.defaults = {
+    DEFAULT_AVATAR_URL: DEFAULT_AVATAR_URL
+}
+exports.roles = roles;

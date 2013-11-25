@@ -6,7 +6,8 @@ module.exports = function(grunt) {
 
     var filesToLint = [
         'Gruntfile.js',
-        'app/server.js'
+        'app/server.js',
+        'test/{,*/}*.js'
     ];
 
     grunt.initConfig({
@@ -20,13 +21,33 @@ module.exports = function(grunt) {
                 }
             }
         },
+        mochaTest: {
+            test: {
+                options: {
+                    reporter: 'spec',
+                    require: 'should',
+                    growl: true
+                },
+                src: ['test/**/*.js']
+            },
+            // exists to output tests in for CI
+            xunit: {
+                options: {
+                    reporter: 'xunit-file',
+                    require: 'should'
+                },
+                src: ['test/**/*.js']
+            }
+        },
         watch: {
             test: {
                 files: filesToLint,
-                tasks: ['jshint:human']
+                tasks: ['mochaTest:test', 'jshint:human']
             }
         }
     });
+
+    grunt.registerTask('test', 'mochaTest:test');
 
     grunt.registerTask('build', [
         'jshint:human'
