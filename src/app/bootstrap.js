@@ -3,6 +3,7 @@
  * Bootstrap application stuff.
  */
 var models = require('./models/models');
+var userService = require('./services/userService').userService;
 
 /**
  * Bootstrap some test data.
@@ -13,7 +14,7 @@ var bootStrapTestData = function() {
             firstName: 'Admin',
             lastName: 'user',
             emailAddress: 'testAdmin@test.com',
-            password: 'passwordAdmin',
+            password: userService.createPassword('secret'),
             username: 'admin',
             roles: [models.roles.validRoles.internal]
         });
@@ -23,7 +24,7 @@ var bootStrapTestData = function() {
             firstName: 'User',
             lastName: 'User',
             emailAddress: 'testUser@test.com',
-            password: 'passwordUser',
+            password: userService.createPassword('secret'),
             username: 'user',
             roles: [models.roles.validRoles.user]
         });

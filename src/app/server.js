@@ -6,6 +6,7 @@ var connect = require('connect');
 var restify = require('restify');
 var apiRoutes = require('./routes/apiRoutes.js');
 var bootstrap = require('./bootstrap').bootstrap;
+var authRouter = require('./routes/authRouter').authRouter;
 
 var port = process.env.PORT || 8000;
 var name = 'Sweet Web App';
@@ -39,8 +40,11 @@ var session = function(store) {
 // Connect config and app start
 var SessionStore = require('connect-mongo')(connect);
 var connectApp = connect()
+    .use(connect.bodyParser())
+    .use(connect.query())
     .use(connect.cookieParser())
     .use(connect.session(session(new SessionStore({url: 'mongodb://localhost/webapp_test/sessions'}))))
+    .use(authRouter.isLoggedIn())
     .use(connect.static('public'));
 
 // Setup routes
