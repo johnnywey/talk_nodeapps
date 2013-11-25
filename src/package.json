@@ -1,0 +1,23 @@
+{
+    "name": "simple-server",
+    "contributors": [
+        {
+            "name": "Johnny Wey",
+            "email": "johnnywey@gmail.com"
+        }
+    ],
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+    },
+    "devDependencies": {
+    },
+    "scripts": {
+        "test": "mocha -R spec",
+        "start": "node app/server.js"
+    },
+    "engines": {
+        "node": "0.10.x",
+        "npm": "1.3.x"
+    }
+}
