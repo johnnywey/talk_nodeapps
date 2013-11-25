@@ -1,0 +1,37 @@
+<section ng-controller="AdminCtrl" class="admin">
+    <header class="controls">
+        <h1>Hello Admin!</h1>
+    </header>
+    <!-- User -->
+    <article ng-controller="UserCtrl">
+        <div class="topcoat-list__container">
+            <h3 class="topcoat-list__header" ng-click="list()">
+                <span class="pull-left">Users</span>
+                <input type="search" placeholder="username, name, etc." focus="focusUserSearch"
+                       ng-show="users.length > 0"
+                       class="topcoat-search-input--large pull-right" stopevent="click" ng-model="userSearchText"/></h3>
+            <ul class="topcoat-list" ng-show="users.length > 0">
+                <li class="topcoat-list__item"
+                    ng-repeat="u in users | filter:userSearchText">
+                    <img src="{{u.imageUrl}}" class="user"/>
+                    <div>
+                        <p>Username: <strong>{{u.username}}</strong></p>
+
+                        <p>Email: <strong>{{u.emailAddress}}</strong></p>
+
+                        <p>Name: <strong>{{u.firstName}} {{u.lastName}}</strong></p>
+
+                        <p>Active: <strong>{{u.active}}</strong></p>
+
+                        <p>Roles -
+                        <ul>
+                            <li ng-repeat="r in u.roles">{{r}}</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <footer></footer>
+                </li>
+            </ul>
+        </div>
+    </article>
+</section>

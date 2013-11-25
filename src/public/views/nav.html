@@ -1,0 +1,16 @@
+<nav class="nav-container centered-content">
+    <ul class="nav nav-primary" navigation>
+        <li ng-show="isInternalAdmin">
+            <a href="#/admin">admin</a>
+        </li>
+        <li>
+            <a href="#/main">main</a>
+        </li>
+        <li class="divider"></li>
+        <li class="nav-user nav-user-image" ng-click="show = !show">
+            <nav class="dropdown-menu" ng-show="show">
+                <a href="/logout">Sign Out</a>
+            </nav>
+        </li>
+    </ul>
+</nav>
