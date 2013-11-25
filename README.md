@@ -171,7 +171,7 @@ Let's see how our applicaiton changes when we install Connect.
 
 ```npm install```
 
-```http://localhost:8000/test.html```
+http://localhost:8000/test.html
 
 [Demo Connect]
 
