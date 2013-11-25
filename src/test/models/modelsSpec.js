@@ -2,7 +2,7 @@
 
 /**
  * Tests for models.
- **/
+ */
 describe('Models', function() {
 	describe('#User', function() {
 		it('should set default avatar image', function() {

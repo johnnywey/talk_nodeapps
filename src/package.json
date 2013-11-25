@@ -10,7 +10,8 @@
     "private": true,
     "dependencies": {
         "mongoose": "~3.x.x",
-        "connect": "~2.x.x"
+        "connect": "~2.x.x",
+        "restify": "~2.x.x"
     },
     "devDependencies": {
         "grunt": "~0.4.x",
@@ -23,7 +24,8 @@
         "grunt-contrib-clean": "~0.5.x",
         "grunt-contrib-copy": "~0.4.x",
         "mocha": "~1.x.x",
-        "should": "~1.x.x"
+        "should": "~1.x.x",
+        "sandboxed-module": "0.2.x"
     },
     "scripts": {
         "start": "node app/server.js"

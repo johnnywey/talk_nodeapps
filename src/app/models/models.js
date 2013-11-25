@@ -49,3 +49,14 @@ exports.defaults = {
     DEFAULT_AVATAR_URL: DEFAULT_AVATAR_URL
 }
 exports.roles = roles;
+
+// This is wrapped with a disconnect call in order to facilitate restarts in dev.
+exports.connectToDatabase = function(url, callback) {
+    mongoose.disconnect();
+    setTimeout(function() {
+        mongoose.connect(url);
+        if (callback) {
+            callback();
+        }
+    }, 1500);
+};
