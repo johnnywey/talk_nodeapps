@@ -24,9 +24,23 @@ var api = restify.createServer({
 });
 api.use(restify.queryParser());
 
+// Secure cookie session config
+var session = function(store) {
+    return {
+        secret: 'keyboard cat',
+        key: 'WEBAPP_AUTH',
+        store: store,
+        cookie: {
+            secure: false
+        }
+    };
+};
+
 // Connect config and app start
+var SessionStore = require('connect-mongo')(connect);
 var connectApp = connect()
     .use(connect.cookieParser())
+    .use(connect.session(session(new SessionStore({url: 'mongodb://localhost/webapp_test/sessions'}))))
     .use(connect.static('public'));
 
 // Setup routes
