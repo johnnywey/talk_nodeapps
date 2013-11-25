@@ -9,7 +9,8 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "mongoose": "~3.x.x"
+        "mongoose": "~3.x.x",
+        "connect": "~2.x.x"
     },
     "devDependencies": {
         "grunt": "~0.4.x",
