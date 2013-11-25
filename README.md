@@ -11,7 +11,7 @@
 
 ## Intro
 ---
-Hi, I'm Johnny Wey. I'm going to talk about making web applications using NodeJS.
+Hi, I'm Johnny Wey.
 
 * [https://twitter.com/johnnywey](Twitter)
 * [https://github.com/johnnywey](Github)
