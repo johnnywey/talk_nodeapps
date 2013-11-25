@@ -1,4 +1,20 @@
+<pre>
+   ____   _       _                                          
+  / __ \ (_) ___ | |__  _ __  _ __  _   ___      _____ _   _ 
+ / / _` || |/ _ \| '_ \| '_ \| '_ \| | | \ \ /\ / / _ \ | | |
+| | (_| || | (_) | | | | | | | | | | |_| |\ V  V /  __/ |_| |
+ \ \__,_|/ |\___/|_| |_|_| |_|_| |_|\__, | \_/\_/ \___|\__, |
+  \____/__/                         |___/              |___/ 
+
+</pre>
 # Creating Node Web Applications - Soup to Nuts
+
+## Intro
+---
+Hi, I'm Johnny Wey. I'm going to talk about making web applications using NodeJS.
+
+* [https://twitter.com/johnnywey](Twitter)
+* [https://github.com/johnnywey](Github)
 
 ## Outline
 ---
@@ -29,10 +45,6 @@
 * HTTP request mock ([Nock](https://github.com/flatiron/nock))
 * Config handling
 * Better return flow handling (promises; options)
-
-## Intro
----
-Hi, I'm Johnny Wey. I'm going to talk about making web applications using NodeJS.
 
 ## Benefits of Using Node as a Web Application Server
 ---
