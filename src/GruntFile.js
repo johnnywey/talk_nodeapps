@@ -36,7 +36,17 @@ module.exports = function(grunt) {
                 files: {
                     src: filesToLint
                 }
-            }
+            },
+            ci: {
+                options: {
+                    jshintrc: '.jshintrc',
+                    reporter: 'checkstyle',
+                    reporterOutput: 'style.xml'
+                },
+                files: {
+                    src: filesToLint
+                }
+            }            
         },
         mochaTest: {
             test: {
@@ -92,6 +102,11 @@ module.exports = function(grunt) {
         'blanket',
         'mochaTest:coverage',
         'mochaTest:travis'
+    ]);
+
+    grunt.registerTask('ci', [
+        'jshint:ci',
+        'mochaTest:xunit'
     ]);
 
     grunt.registerTask('default', 'build');

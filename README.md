@@ -32,7 +32,8 @@ Hi, I'm Johnny Wey.
 * Authentication / Authorization
 * Putting it all together
   * UI
-  * CI options (Grunt, Mocha xunit, coverage script) 
+  * CI options (Grunt, Mocha xunit, coverage script)
+* Plato Code Analysis
 
 #### If there's time:
 * Deploy it
@@ -234,4 +235,26 @@ Now that we have the pieces we need in place, let's add a UI that uses our API a
 ```bower install```
 
 [Demo full app with admin vs. regular user functionality]
+
+We also have CI options (xunit) that allow easy integration of our test.
+
+```git checkout master```
+
+[Demo xunit]
+
+```grunt ci```
+
+[Demo cover.sh]
+
+```./cover.sh```
+
+## Code Analysis with Plato
+---
+[Plato](https://github.com/es-analysis/plato) is a complexity tool that generates project reports.
+
+```npm install -g plato```
+
+```plato -r -d report app```
+
+```open report/index.html```
 
