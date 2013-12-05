@@ -54,11 +54,23 @@ Hi, I'm Johnny Wey.
 * HTTP as common protocool
 * Easy to build project with lose coupling of client and server
 * Simplified, reactive programming model
-* Huge library of easily accessible 
+* NPM
+  * HUGE library of utilities
+  * Very simple to use
+  * Virtually **no dependency hell**
+  * Likely the **best** package management tool in existance
 
 ## Project Organization
 ---
 So, let's start creating a Node application. We'll create a really simple server with a ```package.json```
+
+```git checkout step-0```
+
+```npm init```
+
+This is the default ```package.json``` created for a brand new repo. Let's skip ahead a bit ...
+
+```git reset --hard```
 
 ```git checkout step-1```
 
