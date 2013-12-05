@@ -64,7 +64,9 @@ Hi, I'm Johnny Wey.
 ---
 So, let's start creating a Node application. We'll create a really simple server with a ```package.json```
 
-```git checkout step-0```
+```git checkout step-1```
+
+```mv package.json package.json.old```
 
 ```npm init```
 
