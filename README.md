@@ -260,8 +260,6 @@ We also have CI options (xunit) that allow easy integration of our test.
 
 [Demo cover.sh]
 
-```./cover.sh```
-
 ## Code Analysis with Plato
 ---
 [Plato](https://github.com/es-analysis/plato) is a complexity tool that generates project reports.
