@@ -47,6 +47,14 @@ Hi, I'm Johnny Wey.
 * Config handling
 * Better return flow handling (promises; options)
 
+## Who is using Node these days?
+---
+* IBM - [significant performance advantage as compared to Java](http://www.ibm.com/developerworks/java/library/mo-nodejs-1/index.html)
+* Wal-Mart - Node powers their mobile site
+  * [Black Friday Live Tweets](https://twitter.com/search?q=%23nodebf%20from%3Aeranhammer&src=typd) 
+* Paypal
+* Groupon
+
 ## Benefits of Using Node as a Web Application Server
 ---
 * JSON from end to end; no data conversation
