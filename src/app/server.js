@@ -4,6 +4,9 @@
  */
 var connect = require('connect');
 var restify = require('restify');
+var cookies = require('cookies');
+var expressSession = require('express-session');
+var serveStatic = require('serve-static');
 var apiRoutes = require('./routes/apiRoutes.js');
 var bootstrap = require('./bootstrap').bootstrap;
 
@@ -28,8 +31,9 @@ api.use(restify.queryParser());
 var session = function(store) {
     return {
         secret: 'keyboard cat',
-        key: 'WEBAPP_AUTH',
+        name: 'WEBAPP_AUTH',
         store: store,
+        saveUninitialized: true,
         cookie: {
             secure: false
         }
@@ -37,11 +41,10 @@ var session = function(store) {
 };
 
 // Connect config and app start
-var SessionStore = require('connect-mongo')(connect);
+var MongoStore = require('connect-mongo')(expressSession);
 var connectApp = connect()
-    .use(connect.cookieParser())
-    .use(connect.session(session(new SessionStore({url: 'mongodb://localhost/webapp_test/sessions'}))))
-    .use(connect.static('public'));
+    .use(expressSession(session(new MongoStore({url: 'mongodb://localhost/webapp_test/sessions'}))))
+    .use(serveStatic('public'));
 
 // Setup routes
 apiRoutes.route(connectApp, api);
