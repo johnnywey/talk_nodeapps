@@ -1,0 +1,9 @@
+node_modules
+*.log
+.idea/
+bower_components/
+coverage/
+style.xml
+coverage.html
+xunit.xml
+report/
