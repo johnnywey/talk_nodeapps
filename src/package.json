@@ -10,7 +10,7 @@
     "private": true,
     "dependencies": {
         "mongoose": "~3.x.x",
-        "connect": "~2.x.x",
+        "connect": "~3.x.x",
         "connect-mongo": "~0.4.x",
         "cookies": "~0.x.x",
         "express-session": "~1.x.x",
