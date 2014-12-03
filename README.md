@@ -74,11 +74,15 @@ So, let's start creating a Node application. We'll create a really simple server
 
 ```git checkout step-1```
 
+```git clean -d -f```
+
 ```mv package.json package.json.old```
 
 ```npm init```
 
 This is the default ```package.json``` created for a brand new repo. Let's skip ahead a bit ...
+
+```rm package.json.old```
 
 ```git reset --hard```
 
@@ -94,9 +98,15 @@ Grunt gives us a rich set of plugins we can use to perform all sorts of tasks. O
 
 ```git checkout step-2```
 
+```git clean -d -f```
+
+```npm install -g grunt-cli```
+
 ```npm install```
 
 ```grunt watch```
+
+Observe errors when changing the `server.js` file.
 
 ## Nodemon
 ---
@@ -120,6 +130,10 @@ So, let's install Mongoose and create some domain objects.
 
 ```git checkout step-3```
 
+```git reset --hard```
+
+```git clean -d -f```
+
 ```npm install```
 
 [Demo Mongoose]
@@ -131,6 +145,10 @@ Testing Node has come a really long way. On the server, I've had a lot of luck w
 Mocha is a BDD style testing framework and should.js compliments Mocha with BDD assertions.
 
 ```git checkout step-4```
+
+```git reset --hard```
+
+```git clean -d -f```
 
 ```npm install```
 
@@ -156,9 +174,9 @@ Debugging node is actually pretty straight forward using [Node-inspector](https:
 
 ```npm install -g node-inspector```
 
-```node-inspector &```
+```node-debug app/server.js```
 
-```nodemon app/server.js --debug```
+This will open the debugger in your default browser.
 
 [Demo Debug]
 
@@ -227,6 +245,8 @@ The idea is to add the session handler before the request makes it down the chai
 ```npm install```
 
 [Demo Restify changes]
+
+[Demo difference between authorized route `/user` and unauthorized `/user/:id`]
 
 ```npm checkout step-9```
 
