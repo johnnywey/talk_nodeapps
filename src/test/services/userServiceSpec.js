@@ -74,7 +74,7 @@ describe('UserService', function() {
             var mockUserModel = {
                 User: {
                     findOne: function(query, exclude, callback) {
-                        query._id.should.equal("123");
+                        query._id.should.equal('123');
                         exclude.password.should.equal(0);
                         callback(null, null);
                     }
@@ -87,7 +87,7 @@ describe('UserService', function() {
                 }
             }).userService;
 
-            unit.show({params: {id: "123"}}, mockRes, done);
+            unit.show({params: {id: '123'}}, mockRes, done);
         });
 
         it('should return 200 and user', function(done) {
@@ -101,7 +101,7 @@ describe('UserService', function() {
             var mockUserModel = {
                 User: {
                     findOne: function(query, exclude, callback) {
-                        query._id.should.equal("123");
+                        query._id.should.equal('123');
                         exclude.password.should.equal(0);
                         callback(null, {username: 'test'});
                     }
@@ -114,7 +114,7 @@ describe('UserService', function() {
                 }
             }).userService;
 
-            unit.show({params: {id: "123"}}, mockRes, done);
+            unit.show({params: {id: '123'}}, mockRes, done);
         });
     });
 

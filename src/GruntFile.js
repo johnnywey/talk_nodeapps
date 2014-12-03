@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
     // load all grunt tasks
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
                 files: {
                     src: filesToLint
                 }
-            }            
+            }
         },
         mochaTest: {
             test: {
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
                     reporter: 'travis-cov'
                 },
                 src: ['coverage/test/**/*.js']
-            }            
+            }
         },
         watch: {
             test: {
