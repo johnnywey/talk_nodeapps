@@ -4,6 +4,8 @@
  */
 var connect = require('connect');
 var restify = require('restify');
+var cookies = require('cookies');
+var serveStatic = require('serve-static');
 var apiRoutes = require('./routes/apiRoutes.js');
 var bootstrap = require('./bootstrap').bootstrap;
 
@@ -26,8 +28,8 @@ api.use(restify.queryParser());
 
 // Connect config and app start
 var connectApp = connect()
-    .use(connect.cookieParser())
-    .use(connect.static('public'));
+    .use(cookies.express())
+    .use(serveStatic('public'));
 
 // Setup routes
 apiRoutes.route(connectApp, api);
