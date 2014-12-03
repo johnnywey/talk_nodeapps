@@ -3,14 +3,15 @@
  * Main entry point to our HTTP server.
  */
 var connect = require('connect');
+var bodyParser = require('body-parser');
+var serveStatic = require('serve-static');
+
 var port = process.env.PORT || 8000;
 
 // Connect config and app start
 var connectApp = connect()
-    .use(connect.bodyParser())
-    .use(connect.query())
-    .use(connect.cookieParser())
-    .use(connect.static('public'));
+    .use(bodyParser.urlencoded())
+    .use(serveStatic('public'));
 
 connectApp.listen(port, function() {
     var divider = '================================================================';
