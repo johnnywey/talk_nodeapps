@@ -11,6 +11,7 @@
     "dependencies": {
         "mongoose": "~3.x.x",
         "connect": "~3.x.x",
+        "serve-static": "~1.x.x",
         "connect-mongo": "~0.4.x",
         "cookies": "~0.x.x",
         "express-session": "~1.x.x",
