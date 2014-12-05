@@ -112,7 +112,7 @@ Observe errors when changing the `server.js` file.
 ---
 If you're anything like me, you've gotten used to frameworks like Grails and Rails automatically reloading when changes are made to the application. This is a huge time-saver.
 
-Nodemon will watch the files in your directly and automatically restart the applicaiton when a change is detected. Combined with ```grunt watch```, this behavior allows you to lint, run tests and restart the application whenever a change to a file is saved.
+Nodemon will watch the files in your directory and automatically restart the applicaiton when a change is detected. Combined with ```grunt watch```, this behavior allows you to lint, run tests and restart the application whenever a change to a file is saved.
 
 In terms of usage, Nodemon is meant to be a drop-in replacement for ```node``` including starting in debug mode, running a file and passing command line variables among others.
 
