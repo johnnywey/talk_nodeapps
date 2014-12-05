@@ -11,7 +11,6 @@
     "dependencies": {
         "mongoose": "~3.x.x",
         "connect": "~3.x.x",
-        "serve-static": "~1.x.x",
         "connect-mongo": "~0.4.x",
         "cookies": "~0.x.x",
         "express-session": "~1.x.x",
@@ -19,7 +18,8 @@
         "restify": "~2.x.x",
         "util-extend": "~1.0.x",
         "bcrypt-nodejs": "~0.0.x",
-        "validator": "~1.5.1"
+        "validator": "~1.5.1",
+        "serve-static": "~1.7.x"
     },
     "devDependencies": {
         "grunt": "~0.4.x",
