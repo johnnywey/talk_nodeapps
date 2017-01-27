@@ -140,7 +140,7 @@ So, let's install Mongoose and create some domain objects.
 
 ## Testing
 ---
-Testing Node has come a really long way. On the server, I've had a lot of luck with [Mocha](http://visionmedia.github.io/mocha) and [should.js](https://github.com/visionmedia/should.js/).
+Testing Node has come a really long way. On the server, I've had a lot of luck with [Mocha](http://mochajs.org/) and [should.js](https://github.com/visionmedia/should.js/).
 
 Mocha is a BDD style testing framework and should.js compliments Mocha with BDD assertions.
 
